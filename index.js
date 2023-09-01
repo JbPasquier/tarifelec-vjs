@@ -337,6 +337,18 @@ import {
             `,
             document.querySelector("#content")
           );
+          const tempoToColor = color => {
+            switch(color) {
+              case "TEMPO_BLANC": 
+                return "white";
+              case "TEMPO_ROUGE": 
+                return "red";
+              case "TEMPO_BLEU": 
+                return "blue";
+              default:
+                return "grey";
+            }
+          }
           let chart = new CanvasJS.Chart("chart", {
             backgroundColor: "transparent",
             animationEnabled: true,
@@ -358,7 +370,7 @@ import {
             data: [
               {
                 type: "line",
-                dataPoints: meta.values.map((v) => ({ x: v.date, y: v.wH })),
+                dataPoints: meta.values.map((v) => ({ x: v.date, y: v.wH, markerColor: tempoToColor(v.tempo) })),
               },
             ],
           });
