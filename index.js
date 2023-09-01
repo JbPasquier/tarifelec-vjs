@@ -7,7 +7,7 @@ import {
 (async function () {
   async function getTempoRepository() {
     let repository =
-      "https://raw.githubusercontent.com/grimmlink/tempo-comparatif/master/tempo.json";
+      "https://raw.githubusercontent.com/JbPasquier/tarifelec-vjs/main/tempo.json";
     let values = await (await fetch(repository)).json();
     let mapping = {};
     for (let v of values.dates) {
