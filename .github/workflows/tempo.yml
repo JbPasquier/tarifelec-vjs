@@ -15,8 +15,6 @@ jobs:
           curl 'https://particulier.edf.fr/services/rest/referentiel/historicTEMPOStore?dateBegin=2023&dateEnd=2024' -o tempo_2024.json
       - name: Merge tempo_*.json and tempo.json
         run: |
-          file -i tempo*json
-          cat tempo_202*.json
           jq -s 'map(.dates |= map(select(.couleur != "NON_DEFINI"))) | unique_by(.dates[].date) | { "dates": map(.dates[])}' tempo_2023.json tempo_2024.json tempo.json > tempo_new.json
       - name: Replace old tempo.json file
         run: mv tempo_new.json tempo.json
