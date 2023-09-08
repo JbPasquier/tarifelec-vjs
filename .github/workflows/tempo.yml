@@ -16,7 +16,7 @@ jobs:
         run: |
           file -i tempo*json
           cat tempo_2023.json
-          jq -s 'map(.dates |= map(select(.couleur != "NON_DEFINI"))) | unique_by(.dates[].date) | { "dates": map(.dates[])}' tempo_2024.json tempo.json > tempo_new.json
+          jq -s 'map(.dates |= map(select(.couleur != "NON_DEFINI"))) | unique_by(.dates[].date) | { "dates": map(.dates[])}' tempo_2023.json tempo.json > tempo_new.json
       - name: Replace old tempo.json file
         run: mv tempo_new.json tempo.json
       - name: Cleanup
