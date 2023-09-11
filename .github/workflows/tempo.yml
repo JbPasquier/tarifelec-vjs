@@ -8,7 +8,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: GET EDF historicTEMPOStore 09-2023 - 09-2024
         run: |
           curl 'https://particulier.edf.fr/services/rest/referentiel/historicTEMPOStore?dateBegin=2023&dateEnd=2024' -o tempo_2024.json
