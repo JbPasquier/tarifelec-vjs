@@ -15,8 +15,9 @@ jobs:
       - name: Merge tempo_*.json and tempo.json
         run: |
           jq -s 'map(.dates |= map(select(.couleur != "NON_DEFINI"))) | unique_by(.dates[].date) | { "dates": map(.dates[])}' tempo_2023.json tempo.json > tempo_new.json
+          jq ' .dates |= unique_by(.date) ' tempo_new.json > tempo_dedup.json
       - name: Replace old tempo.json file
-        run: mv tempo_new.json tempo.json
+        run: mv tempo_dedup.json tempo.json
       - name: Cleanup
         run: rm tempo_*.json
       - name: Commit file
