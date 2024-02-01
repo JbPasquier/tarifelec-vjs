@@ -328,7 +328,7 @@ import {
                         <b style="color:red;"
                           >${meta.tempo.errors} entrées avec couleur inconnue</b
                         >
-                        pour le calcul Tempo, ping <b>@Frey-Mont</b> !
+                        pour le calcul Tempo.
                       </p>
                     </aside>
                   </article>`
