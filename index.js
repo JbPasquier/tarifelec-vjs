@@ -18,36 +18,36 @@ import {
   const TEMPO = await getTempoRepository();
   const TEMPO_PRICING = {
     false: {
-      TEMPO_BLEU: 0.1369,
-      TEMPO_BLANC: 0.1654,
-      TEMPO_ROUGE: 0.7324,
+      TEMPO_BLEU: 0.1609,
+      TEMPO_BLANC: 0.1894,
+      TEMPO_ROUGE: 0.7562,
     },
     true: {
-      TEMPO_BLEU: 0.1056,
-      TEMPO_BLANC: 0.1246,
-      TEMPO_ROUGE: 0.1328,
+      TEMPO_BLEU: 0.1296,
+      TEMPO_BLANC: 0.1486,
+      TEMPO_ROUGE: 0.1568,
     },
   };
-  const BASE_PRICING = 0.2276;
+  const BASE_PRICING = 0.2516;
   const TEMPO_SUBSCRIPTIONS = [
-    [6, 12.8],
-    [9, 16.0],
-    [12, 19.29],
-    [15, 22.3],
-    [18, 25.29],
-    [30, 38.13],
-    [36, 44.28],
+    [6, 12.96],
+    [9, 16.16],
+    [12, 19.44],
+    [15, 22.45],
+    [18, 25.44],
+    [30, 38.29],
+    [36, 44.42],
   ];
   const BASE_SUBSCRIPTIONS = [
-    [3, 9.47],
-    [6, 12.44],
-    [9, 15.63],
-    [12, 18.89],
-    [15, 21.92],
-    [18, 24.92],
-    [24, 31.6],
-    [30, 37.29],
-    [36, 44.66],
+    [3, 9.63],
+    [6, 12.60],
+    [9, 15.79],
+    [12, 19.04],
+    [15, 22.07],
+    [18, 25.09],
+    [24, 31.76],
+    [30, 37.44],
+    [36, 44.82],
   ];
   const footer = html`<hr />
     <section>
