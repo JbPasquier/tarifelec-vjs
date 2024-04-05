@@ -21,7 +21,7 @@ jobs:
       - name: Cleanup
         run: rm tempo_*.json
       - name: Commit file
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update tempo.json
           branch: main
